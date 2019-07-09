@@ -44,10 +44,10 @@ public class DatabaseConnection {
 		// Statement and ResultSet are AutoCloseable and closed automatically.
 		try (Statement statement = connection.createStatement()) {
 			try (ResultSet resultSet = statement.executeQuery("select first_name, last_name from employees")) {
-				System.out.println("FIRST_NAME" + "  " + "LAST_NAME");
+				System.out.println("FIRST_NAME" + "\t\t" + "LAST_NAME");
 				System.out.println("---------------------");
 				while (resultSet.next())
-					System.out.println(resultSet.getString(1) + " " + resultSet.getString(2) + " ");
+					System.out.println(resultSet.getString(1) + "\t\t" + resultSet.getString(2) + " ");
 			}
 		}
 
